@@ -205,6 +205,7 @@ namespace YanpingChiayinA2
             txtAddress.Text = string.Empty;
             richBoxProblem.Text = string.Empty;
 
+            labMessage.ForeColor = Color.Black;
             labMessage.Text = "Reset successful";
         }
 
@@ -236,6 +237,7 @@ namespace YanpingChiayinA2
             txtYear.Text = "1990";
             txtAddress.Text = "123 King Street North";
 
+            labMessage.ForeColor = Color.Black;
             labMessage.Text = "Pre-fill successful";
         }
     }

@@ -46,21 +46,9 @@ namespace A2ClassLibrary
         {
             try
             {
-                string projectPath = AppDomain.CurrentDomain.BaseDirectory;
-                projectPath = projectPath.Substring(0, projectPath.IndexOf("bin\\"));
-                string filePath = Path.Combine(projectPath,fileName);
-                Console.WriteLine("filePath: "+ filePath);
-
                 BookAppointment returnNewData = DataConversion(bookAppointment);
                 string record = returnNewData.ToString();
-                if (!File.Exists(filePath)) {
-                    using (writer = new StreamWriter(fileName,true)) {
-                        writer.WriteLine(record);
-                    }
-                }
-                else
-                {
-              
+                using (writer = new StreamWriter(fileName,true)) {
                     writer.WriteLine(record);
                 }
             }
@@ -73,11 +61,12 @@ namespace A2ClassLibrary
         #region Tostring DataConversion
         public override string ToString()
         {
-            string record = $"CustomerName: {CustomerName},Address: {Address},\n"
-                + $"City: {City},Province: {Province},PostalCode: {PostalCode},\n"
-                + $"HomePhone: {HomePhone},CellPhone: {CellPhone},Email: {Email},MakeModel: {MakeModel},\n"
-                + $"Year: {Year},AppointmentDate: {AppointmentDate},Problem: {Problem}{Environment.NewLine}|"
-              ;
+            string record = $"CustomerName: {CustomerName},  Address: {Address},\n"
+                + $"City: {City},  Province: {Province},  PostalCode: {PostalCode},\n"
+                + $"HomePhone: {HomePhone},  CellPhone: {CellPhone},\n"
+                + $"Email: {Email},  MakeModel: {MakeModel},\n"
+                + $"Year: {Year},  AppointmentDate: {AppointmentDate},\n" 
+                + $"Problem: {Problem}{Environment.NewLine}|" ;
 
             return record;
         }
