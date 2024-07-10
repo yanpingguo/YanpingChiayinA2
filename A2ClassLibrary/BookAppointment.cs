@@ -47,12 +47,13 @@ namespace A2ClassLibrary
 
                 if (!File.Exists(filePath)) {
                     using (writer = new StreamWriter(fileName,true)) {
-                        writer.WriteLine(record+"|");
+                        writer.WriteLine(record);
                     }
                 }
                 else
                 {
-                    writer.WriteLine(record+"|");
+              
+                    writer.WriteLine(record);
                 }
             }
             catch (Exception ex) {
@@ -64,11 +65,11 @@ namespace A2ClassLibrary
         #region Tostring
         public override string ToString()
         {
-            string record = $"CustomerName:{CustomerName},Address:{Address},"
-                + $"City:{City},Province:{Province},PostalCode:{PostalCode},"
-                + $"Province:{Province},PostalCode:{PostalCode},HomePhone:{HomePhone},"
-                + $"CellPhone:{CellPhone},Email:{Email},MakeModel:{MakeModel},"
-                + $"Year:{Year},AppointmentDate:{AppointmentDate},Problem:{Problem},"
+            string record = $"CustomerName: {CustomerName},Address: {Address},\n"
+                + $"City: {City},Province: {Province},PostalCode: {PostalCode},\n"
+                + $"Province: {Province},PostalCode: {PostalCode},HomePhone: {HomePhone},\n"
+                + $"CellPhone: {CellPhone},Email: {Email},MakeModel: {MakeModel},\n"
+                + $"Year: {Year},AppointmentDate: {AppointmentDate},Problem: {Problem}{Environment.NewLine}|"
               ;
 
             return record;

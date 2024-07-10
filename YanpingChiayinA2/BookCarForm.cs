@@ -129,19 +129,28 @@ namespace YanpingChiayinA2
             {
                 labMessage.ForeColor = Color.Black;
             }
-
-            string record = $"CustomerName:{txtCustomerName.Text},Address:{txtAddress.Text},"
-                + $"City:{txtCity.Text},Province:{txtProvince.Text},PostalCode:{txtPostalCode.Text},"
-                + $"HomePhone: {txtHomePhone.Text},CellPhone:{txtCellPhone.Text},Email:{txtEmail.Text}," +
-                $"MakeModel:{txtModel.Text},"
-                + $"Year:{txtYear.Text} ,AppointmentDate: {dateAppointment.Text} ,Problem: {richBoxProblem.Text},"
-              ;
-
-            new BookAppointment().InsertBookAppointment(record);
-            labMessage.Text = "Book Appointment successful";
+            
+            //save data to appointment.txt file
+            try
+            {
+                BookAppointment bookAppointment = getAppointmentObject();
+                new BookAppointment().InsertBookAppointment(bookAppointment.ToString());
+                labMessage.Text = "Book Appointment successful";
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                labMessage.ForeColor = Color.Red;
+                labMessage.Text = "Book Appointment Fail";
             }
 
-            public void getAppointmentObject()
+        }
+
+        /// <summary>
+        /// get appoinment object
+        /// </summary>
+        /// <returns></returns>
+            public BookAppointment getAppointmentObject()
         {
             BookAppointment bookAppointment = new BookAppointment();
             bookAppointment.Address = txtAddress.Text;
@@ -159,6 +168,7 @@ namespace YanpingChiayinA2
             }
             bookAppointment.AppointmentDate = dateAppointment.Value;
             bookAppointment.Problem = richBoxProblem.Text;
+            return bookAppointment;
         }
         }
 }
