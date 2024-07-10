@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanpingChiayinA2", "YanpingChiayinA2\YanpingChiayinA2.csproj", "{6ADE8CA4-1796-4706-8FFE-C1B3A57E54CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A2ClassLibrary", "A2ClassLibrary\A2ClassLibrary.csproj", "{23733B0F-82C8-4C51-B5EA-FB7C41AA8C47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ADE8CA4-1796-4706-8FFE-C1B3A57E54CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADE8CA4-1796-4706-8FFE-C1B3A57E54CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADE8CA4-1796-4706-8FFE-C1B3A57E54CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADE8CA4-1796-4706-8FFE-C1B3A57E54CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23733B0F-82C8-4C51-B5EA-FB7C41AA8C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23733B0F-82C8-4C51-B5EA-FB7C41AA8C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23733B0F-82C8-4C51-B5EA-FB7C41AA8C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23733B0F-82C8-4C51-B5EA-FB7C41AA8C47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C05B4462-174F-4602-946F-3D7DAD5E710B}
+	EndGlobalSection
+EndGlobal
