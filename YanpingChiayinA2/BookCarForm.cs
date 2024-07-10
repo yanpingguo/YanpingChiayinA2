@@ -50,23 +50,23 @@ namespace YanpingChiayinA2
             {
                 if (!isPostalcode)
                 {
-                    labMessage.Text += "Please write correct Canadian postal pattern A2A 2A2" + Environment.NewLine;
+                    labMessage.Text += "Please write  Canadian postal pattern A2A 2A2 if email not provided" + Environment.NewLine;
                     IsError = true;
                 }
 
                 if (!isProvinceCode)
                 {
-                    labMessage.Text += "Please write correct Canadian province or territory code" + Environment.NewLine;
+                    labMessage.Text += "Please write Canadian province or territory code if email not provided" + Environment.NewLine;
                     IsError = true;
                 }
                 if(string.IsNullOrWhiteSpace(txtAddress.Text)){
-                    labMessage.Text += "Please write Address" + Environment.NewLine;
+                    labMessage.Text += "Please write Address if email not provided" + Environment.NewLine;
                     IsError = true;
                 }
 
                 if (string.IsNullOrWhiteSpace(txtCity.Text))
                 {
-                    labMessage.Text += "Please write City" + Environment.NewLine;
+                    labMessage.Text += "Please write City if emial not provided" + Environment.NewLine;
                     IsError = true;
                 }
             }
@@ -133,8 +133,8 @@ namespace YanpingChiayinA2
             //save data to appointment.txt file
             try
             {
-                BookAppointment bookAppointment = getAppointmentObject();
-                new BookAppointment().InsertBookAppointment(bookAppointment.ToString());
+                BookAppointment bookAppointment = getAppointmentObject(customerName);
+                new BookAppointment().InsertBookAppointment(bookAppointment);
                 labMessage.Text = "Book Appointment successful";
             }
             catch(Exception ex)
@@ -150,11 +150,11 @@ namespace YanpingChiayinA2
         /// get appoinment object
         /// </summary>
         /// <returns></returns>
-            public BookAppointment getAppointmentObject()
+            public BookAppointment getAppointmentObject(string customerName)
         {
             BookAppointment bookAppointment = new BookAppointment();
             bookAppointment.Address = txtAddress.Text;
-            bookAppointment.CustomerName = txtCustomerName.Text;
+            bookAppointment.CustomerName = customerName;
             bookAppointment.City = txtCity.Text;
             bookAppointment.Province = txtProvince.Text;
             bookAppointment.PostalCode = txtPostalCode.Text;
@@ -166,7 +166,7 @@ namespace YanpingChiayinA2
             {
                 bookAppointment.Year = int.Parse(txtYear.Text);
             }
-            bookAppointment.AppointmentDate = dateAppointment.Value;
+            bookAppointment.AppointmentDate = dateAppointment.Value.ToString();
             bookAppointment.Problem = richBoxProblem.Text;
             return bookAppointment;
         }

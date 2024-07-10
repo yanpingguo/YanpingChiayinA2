@@ -142,7 +142,7 @@
             // labMessage
             // 
             labMessage.AutoSize = true;
-            labMessage.Location = new Point(24, 394);
+            labMessage.Location = new Point(24, 529);
             labMessage.Margin = new Padding(2, 0, 2, 0);
             labMessage.Name = "labMessage";
             labMessage.Size = new Size(63, 24);
@@ -152,7 +152,7 @@
             // txtCustomerName
             // 
             txtCustomerName.Location = new Point(199, 24);
-            txtCustomerName.Margin = new Padding(2, 2, 2, 2);
+            txtCustomerName.Margin = new Padding(2);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(218, 30);
             txtCustomerName.TabIndex = 9;
@@ -160,7 +160,7 @@
             // txtAddress
             // 
             txtAddress.Location = new Point(199, 64);
-            txtAddress.Margin = new Padding(2, 2, 2, 2);
+            txtAddress.Margin = new Padding(2);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(218, 30);
             txtAddress.TabIndex = 10;
@@ -168,7 +168,7 @@
             // txtHomePhone
             // 
             txtHomePhone.Location = new Point(199, 245);
-            txtHomePhone.Margin = new Padding(2, 2, 2, 2);
+            txtHomePhone.Margin = new Padding(2);
             txtHomePhone.Name = "txtHomePhone";
             txtHomePhone.Size = new Size(218, 30);
             txtHomePhone.TabIndex = 11;
@@ -176,7 +176,7 @@
             // txtPostalCode
             // 
             txtPostalCode.Location = new Point(199, 193);
-            txtPostalCode.Margin = new Padding(2, 2, 2, 2);
+            txtPostalCode.Margin = new Padding(2);
             txtPostalCode.Name = "txtPostalCode";
             txtPostalCode.Size = new Size(218, 30);
             txtPostalCode.TabIndex = 12;
@@ -184,7 +184,7 @@
             // txtProvince
             // 
             txtProvince.Location = new Point(199, 145);
-            txtProvince.Margin = new Padding(2, 2, 2, 2);
+            txtProvince.Margin = new Padding(2);
             txtProvince.Name = "txtProvince";
             txtProvince.Size = new Size(218, 30);
             txtProvince.TabIndex = 13;
@@ -192,7 +192,7 @@
             // txtCity
             // 
             txtCity.Location = new Point(199, 105);
-            txtCity.Margin = new Padding(2, 2, 2, 2);
+            txtCity.Margin = new Padding(2);
             txtCity.Name = "txtCity";
             txtCity.Size = new Size(218, 30);
             txtCity.TabIndex = 14;
@@ -200,7 +200,7 @@
             // txtEmail
             // 
             txtEmail.Location = new Point(199, 337);
-            txtEmail.Margin = new Padding(2, 2, 2, 2);
+            txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(218, 30);
             txtEmail.TabIndex = 16;
@@ -208,7 +208,7 @@
             // txtCellPhone
             // 
             txtCellPhone.Location = new Point(199, 291);
-            txtCellPhone.Margin = new Padding(2, 2, 2, 2);
+            txtCellPhone.Margin = new Padding(2);
             txtCellPhone.Name = "txtCellPhone";
             txtCellPhone.Size = new Size(218, 30);
             txtCellPhone.TabIndex = 17;
@@ -256,7 +256,7 @@
             // txtModel
             // 
             txtModel.Location = new Point(714, 20);
-            txtModel.Margin = new Padding(2, 2, 2, 2);
+            txtModel.Margin = new Padding(2);
             txtModel.Name = "txtModel";
             txtModel.Size = new Size(218, 30);
             txtModel.TabIndex = 22;
@@ -264,7 +264,7 @@
             // txtYear
             // 
             txtYear.Location = new Point(714, 64);
-            txtYear.Margin = new Padding(2, 2, 2, 2);
+            txtYear.Margin = new Padding(2);
             txtYear.Name = "txtYear";
             txtYear.Size = new Size(218, 30);
             txtYear.TabIndex = 24;
@@ -272,7 +272,7 @@
             // richBoxProblem
             // 
             richBoxProblem.Location = new Point(516, 187);
-            richBoxProblem.Margin = new Padding(2, 2, 2, 2);
+            richBoxProblem.Margin = new Padding(2);
             richBoxProblem.Name = "richBoxProblem";
             richBoxProblem.Size = new Size(675, 237);
             richBoxProblem.TabIndex = 25;
@@ -281,7 +281,7 @@
             // btnBookAppointment
             // 
             btnBookAppointment.Location = new Point(516, 442);
-            btnBookAppointment.Margin = new Padding(2, 2, 2, 2);
+            btnBookAppointment.Margin = new Padding(2);
             btnBookAppointment.Name = "btnBookAppointment";
             btnBookAppointment.Size = new Size(208, 41);
             btnBookAppointment.TabIndex = 26;
@@ -292,7 +292,7 @@
             // btnReset
             // 
             btnReset.Location = new Point(754, 442);
-            btnReset.Margin = new Padding(2, 2, 2, 2);
+            btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(116, 41);
             btnReset.TabIndex = 27;
@@ -302,7 +302,7 @@
             // btnPreFill
             // 
             btnPreFill.Location = new Point(1075, 442);
-            btnPreFill.Margin = new Padding(2, 2, 2, 2);
+            btnPreFill.Margin = new Padding(2);
             btnPreFill.Name = "btnPreFill";
             btnPreFill.Size = new Size(116, 41);
             btnPreFill.TabIndex = 28;
@@ -312,7 +312,7 @@
             // btnClose
             // 
             btnClose.Location = new Point(915, 442);
-            btnClose.Margin = new Padding(2, 2, 2, 2);
+            btnClose.Margin = new Padding(2);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(116, 41);
             btnClose.TabIndex = 29;
@@ -322,7 +322,7 @@
             // dateAppointment
             // 
             dateAppointment.Location = new Point(714, 109);
-            dateAppointment.Margin = new Padding(2, 2, 2, 2);
+            dateAppointment.Margin = new Padding(2);
             dateAppointment.Name = "dateAppointment";
             dateAppointment.Size = new Size(221, 30);
             dateAppointment.TabIndex = 30;
@@ -332,7 +332,7 @@
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1359, 491);
+            ClientSize = new Size(1359, 582);
             Controls.Add(dateAppointment);
             Controls.Add(btnClose);
             Controls.Add(btnPreFill);
@@ -362,7 +362,7 @@
             Controls.Add(labCity);
             Controls.Add(labAddress);
             Controls.Add(labCustomerName);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "BookCarForm";
             Text = "Book Car Maintenance";
             ResumeLayout(false);
