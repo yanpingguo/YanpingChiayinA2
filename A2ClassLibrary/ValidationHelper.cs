@@ -138,7 +138,11 @@ namespace A2ClassLibrary
 
             return false;
         }
-
+        /// <summary>
+        /// validation appointment date cannot be in the past
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static Boolean IsAppointmentDate(DateTime date)
         {
             if(string.IsNullOrWhiteSpace(date.ToString()))

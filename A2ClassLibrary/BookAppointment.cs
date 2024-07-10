@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Project: Book car Maintenance
+ * Create by: yanping & chinayin
+ * Date: 9 July 2024
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +41,7 @@ namespace A2ClassLibrary
 
         #endregion
 
-        #region Book Appointment
+        #region InsertBookAppointment
         public void InsertBookAppointment(BookAppointment bookAppointment)
         {
             try
@@ -100,7 +105,9 @@ namespace A2ClassLibrary
 
             return bookAppointment;
         }
+        #endregion
 
+        #region getPhoneData
         /// <summary>
         /// insert the dashes into the phone numbers
         /// </summary>
@@ -114,11 +121,10 @@ namespace A2ClassLibrary
                 return phoneNumber.Substring(0, 3) + "-" + phoneNumber.Substring(3, 3) + "-"
                 + phoneNumber.Substring(6, 4);
             }
-          
+
             return phone;
         }
 
         #endregion
-
     }
 }
