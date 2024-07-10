@@ -1,3 +1,9 @@
+/**
+ * Project: Book car Maintenance
+ * Create by: yanping & chinayin
+ * Date: 9 July 2024
+ */
+
 using A2ClassLibrary;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
@@ -11,15 +17,21 @@ namespace YanpingChiayinA2
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Book Appointment
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBookAppointment_Click(object sender, EventArgs e)
         {
             labMessage.Text = string.Empty;
             bool IsError = false;
             //Verify customer Name
             string customerName = ValidationHelper.Capitalize(txtCustomerName.Text);
-            if (string.IsNullOrWhiteSpace(customerName)) {
-                labMessage.Text += "Please write customerName"+ Environment.NewLine;
-                IsError=true;
+            if (string.IsNullOrWhiteSpace(customerName))
+            {
+                labMessage.Text += "Please write customerName" + Environment.NewLine;
+                IsError = true;
             }
 
             // email and postal information 
@@ -27,7 +39,7 @@ namespace YanpingChiayinA2
             //All four are fine, but not mandatory, when an email is provided.
 
             bool isPostalcode = ValidationHelper.IsValidPostalCode(txtPostalCode.Text);
-            bool isProvinceCode =  ValidationHelper.IsValidProvinceCode(txtProvince.Text);
+            bool isProvinceCode = ValidationHelper.IsValidProvinceCode(txtProvince.Text);
             if (!string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 if (!ValidationHelper.IsValidEmail(txtEmail.Text))
@@ -35,7 +47,8 @@ namespace YanpingChiayinA2
                     labMessage.Text += "Please write correct email address" + Environment.NewLine;
                     IsError = true;
                 }
-                if (!string.IsNullOrWhiteSpace(txtPostalCode.Text) && !isPostalcode) {
+                if (!string.IsNullOrWhiteSpace(txtPostalCode.Text) && !isPostalcode)
+                {
                     labMessage.Text += "Please write correct Canadian postal pattern A2A 2A2" + Environment.NewLine;
                     IsError = true;
                 }
@@ -59,7 +72,8 @@ namespace YanpingChiayinA2
                     labMessage.Text += "Please write Canadian province or territory code if email not provided" + Environment.NewLine;
                     IsError = true;
                 }
-                if(string.IsNullOrWhiteSpace(txtAddress.Text)){
+                if (string.IsNullOrWhiteSpace(txtAddress.Text))
+                {
                     labMessage.Text += "Please write Address if email not provided" + Environment.NewLine;
                     IsError = true;
                 }
@@ -102,12 +116,13 @@ namespace YanpingChiayinA2
                 }
             }
 
-            if (string.IsNullOrWhiteSpace(txtModel.Text)) {
+            if (string.IsNullOrWhiteSpace(txtModel.Text))
+            {
                 labMessage.Text += "Please enter Make & model" + Environment.NewLine;
                 IsError = true;
             }
 
-            if(!string.IsNullOrWhiteSpace(txtYear.Text) && !ValidationHelper.IsValidYear(txtYear.Text))
+            if (!string.IsNullOrWhiteSpace(txtYear.Text) && !ValidationHelper.IsValidYear(txtYear.Text))
             {
                 labMessage.Text += "Please enter this year between 1900 and the current year plus one" + Environment.NewLine;
                 IsError = true;
@@ -129,7 +144,7 @@ namespace YanpingChiayinA2
             {
                 labMessage.ForeColor = Color.Black;
             }
-            
+
             //save data to appointment.txt file
             try
             {
@@ -137,7 +152,7 @@ namespace YanpingChiayinA2
                 new BookAppointment().InsertBookAppointment(bookAppointment);
                 labMessage.Text = "Book Appointment successful";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 labMessage.ForeColor = Color.Red;
@@ -150,7 +165,7 @@ namespace YanpingChiayinA2
         /// get appoinment object
         /// </summary>
         /// <returns></returns>
-            public BookAppointment getAppointmentObject(string customerName)
+        public BookAppointment getAppointmentObject(string customerName)
         {
             BookAppointment bookAppointment = new BookAppointment();
             bookAppointment.Address = txtAddress.Text;
@@ -170,5 +185,58 @@ namespace YanpingChiayinA2
             bookAppointment.Problem = richBoxProblem.Text;
             return bookAppointment;
         }
+
+        /// <summary>
+        /// Reset button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtCustomerName.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtProvince.Text = string.Empty;
+            txtPostalCode.Text = string.Empty;
+            txtHomePhone.Text = string.Empty;
+            txtCellPhone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtModel.Text = string.Empty;
+            txtYear.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            richBoxProblem.Text = string.Empty;
+
+            labMessage.Text = "Reset successful";
         }
+
+        /// <summary>
+        /// Close button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Prefill button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnPreFill_Click(object sender, EventArgs e)
+        {
+            txtCustomerName.Text = "Emma ";
+            txtCity.Text = "Waterloo";
+            txtProvince.Text = "ON";
+            txtPostalCode.Text = "A2A 2A2";
+            txtHomePhone.Text = "123-123-1234";
+            txtCellPhone.Text = "123-123-1234";
+            txtEmail.Text = "emma@gmail.com";
+            txtModel.Text = "Honda Civic";
+            txtYear.Text = "1990";
+            txtAddress.Text = "123 King Street North";
+
+            labMessage.Text = "Pre-fill successful";
+        }
+    }
 }

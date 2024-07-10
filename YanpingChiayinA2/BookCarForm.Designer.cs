@@ -298,6 +298,7 @@
             btnReset.TabIndex = 27;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnPreFill
             // 
@@ -308,6 +309,7 @@
             btnPreFill.TabIndex = 28;
             btnPreFill.Text = "Pre-fill";
             btnPreFill.UseVisualStyleBackColor = true;
+            btnPreFill.Click += btnPreFill_Click;
             // 
             // btnClose
             // 
@@ -318,6 +320,7 @@
             btnClose.TabIndex = 29;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // dateAppointment
             // 
